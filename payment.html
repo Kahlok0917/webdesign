@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unique Sport Direction</title>
+<link href="home_page.css" rel="stylesheet" />
+<link href="payment.css" rel="stylesheet" />
+<link href="https://ionicons.com/usage">
+<script>
+  function creditCard()
+  {
+    window.location="creditcard.html"
+  }
+
+  function onlineBanking()
+  {
+    window.location="onlinebanking.html"
+  }
+
+  function cashOnDelivery()
+  {
+    window.location="cashondelivery.html"
+  }
+</script>
+
+<style>
+  form.payment,img{
+    width:20%;
+}
+</style>
+</head>
+
+<body>
+  <header>
+  <img src="usd_logo.jpeg" alt="LOGO" >
+  <div class="addtocart">
+    <button style="font-size:12px"> <ion-icon name="cart-outline"></ion-icon><a href="addtocart.html">Add to Cart </a><span>0</span</button>
+  </div>
+  <div class="member">
+    <button style="font-size:12px"><ion-icon name="people-outline"></ion-icon><a href="login.html">Member Login</a></button>
+  </div>
+  </header>
+
+<div class="topnav">
+  <a href="homepage.html">Home</a>
+  <a href="newinpage.html">New in</a>
+  <a href="menpage.html">Men</a>
+  <a href="womenpage.html">Women</a>
+  <a href="contact_us.html">Contact us</a>
+  <a href="aboutus.html">About us</a>
+  <a href="faq.html">FAQ</a>
+  <a href="testimonial.html">Testimonial</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+<body>
+  <h3>Payment</h3>
+
+  <form id="payment" name="payment"> 
+  <label for="paymentselection">Payment Selection:</label></br>
+            <input type="radio" id="paymentselection" name="paymentselection" value="creditcard" onclick='creditCard()'>
+            <label for="creditcard">Credit Card</label></br>
+            <img src="creditcard.jpg" alt="credit card"><br/><br/>
+            <input type="radio" id="paymentselection" name="paymentselection" value="onlinebanking" onclick='onlineBanking()'>
+            <label for="onlinebanking">Online Banking</label></br>
+            <img src="onlinebanking.jpg" alt="online banking"><br/><br/>
+            <input type="radio" id="paymentselection" name="paymentselection" value="cashondelivery" onclick='cashOnDelivery()'>
+            <label for="cashondelivery">Cash On Delivery</label></br></br>
+            <img src="cashondelivery.jpg" alt="cash on delivery"><br/><br/>
+  </form>
+
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <script src="addtocart.js"></script>
+
+<footer>
+    Unique Sports Direction(USD) &#8226; 012-3456789 &#8226; uniqueSD@gmail.com
+</footer>
+              
+</body>
+</html>

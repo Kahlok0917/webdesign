@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unique Sport Direction</title>
+<link href="home_page.css" rel="stylesheet" />
+<link href="signup.css" rel="stylesheet" />
+<link href="https://ionicons.com/usage">
+<script>
+    function submitForm()
+    {
+        var fname = document.getElementById('fname').value;
+        var lname = document.getElementById('lname').value;
+        var date = document.getElementById('date').value;
+        var email = document.getElementById('email').value;
+        var pwd = document.getElementById('pwd').value;
+      
+      if(fname=='' && lname=='' && date=='' && email=='' && pwd=='')
+      {
+        alert("Please fill all fields...!!!!!!");
+        return false;
+      }
+      
+        else if(fname == '')
+      {
+          alert('Please enter your first name.');
+          return false;
+      }
+
+      else if(lname == '')
+      {
+          alert('Please enter your last name.');
+          return false;
+      }
+
+      else if(date == '')
+      {
+          alert('Please select birth date.');
+          return false;
+      }
+
+      else if(email == '')
+      {
+          alert('Please enter your email.');
+          return false;
+      }
+
+      else if(pwd == '')
+      {
+          alert('Please enter your password.');
+          return false;
+      }
+      
+      else
+      {
+        if(fname != '' && lname != '' && date!='' && email!='' &&pwd!='')
+          {
+              alert('You are already successfully sign up as a member');
+
+              return false;
+          }
+          else
+          {
+              alert('Unable to sign up as a member.');
+              return false;
+          }
+      }
+    }
+</script>
+</head>
+<body>
+  <header>
+  <img src="usd_logo.jpeg" alt="LOGO" >
+  <div class="addtocart">
+    <button style="font-size:12px"> <ion-icon name="cart-outline"></ion-icon><a href="addtocart.html">Add to Cart </a><span>0</span</button>
+  </div>
+  <div class="member">
+    <button style="font-size:12px"><ion-icon name="people-outline"></ion-icon><a href="login.html">Member Login</a></button>
+  </div>
+  </header>
+<div class="topnav">
+  <a href="homepage.html">Home</a>
+  <a href="newinpage.html">New in</a>
+  <a href="menpage.html">Men</a>
+  <a href="womenpage.html">Women</a>
+  <a href="contact_us.html">Contact us</a>
+  <a href="about_us.html">About us</a>
+  <a href="faq.html">FAQ</a>
+  <a href="testimonial.html">Testimonial</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+     
+  <h2>Sign up</h2>
+
+    <form method="POST">
+        <div class="name">
+            <div class="fname">
+        <label for="fname">First Name</label><br/>
+        <input type="fname" id="fname" name="fname" required><br/>
+            </div>
+       
+            <div class="lname">
+        <label for="lname">Last Name</label><br/>
+        <input type="lname" id="lname" name="lname" required><br/>
+        </div>
+        </div>
+        <div class="mid">
+
+        <div class="date">
+        <label for="date">Date of Birth</label><br/>
+        <input type="date" id="date" name="date" required><br/>
+        </div>
+
+        <div class="email">
+        <label for="email">Email</label><br/>
+        <input type="email" id="email" name="email" required><br/>
+        </div>  
+
+        <div class="pass">
+        <label for="pwd">Password</label><br/>
+        <input type="password" id="pwd" name="password" required><br/>
+        </div>
+
+        </div>
+        <button type="submit" onclick="javascript:return submitForm();">Sign <br/> Up!</button>
+
+    </form>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="addtocart.js"></script>
+
+
+    <footer>
+      Unique Sports Direction(USD) &#8226; 012-3456789 &#8226; uniqueSD@gmail.com
+  </footer>
+  </body>
+  </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unique Sport Direction</title>
+<link href="home_page.css" rel="stylesheet" />
+<link href="payment.css" rel="stylesheet" />
+<link href="https://ionicons.com/usage">
+<style>
+  .attention {
+  background-color: lightgrey;
+  width: 935px;
+  border: 15px solid black;
+  padding: 25px;
+  margin: 10px;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+  <header>
+  <img src="usd_logo.jpeg" alt="LOGO" >
+  <div class="addtocart">
+    <button style="font-size:12px"> <ion-icon name="cart-outline"></ion-icon><a href="addtocart.html">Add to Cart </a><span>0</span</button>
+  </div>
+  <div class="member">
+    <button style="font-size:12px"><ion-icon name="people-outline"></ion-icon><a href="login.html">Member Login</a></button>
+  </div>
+  </header>
+
+<div class="topnav">
+  <a href="homepage.html">Home</a>
+  <a href="newinpage.html">New in</a>
+  <a href="menpage.html">Men</a>
+  <a href="womenpage.html">Women</a>
+  <a href="contact_us.html">Contact us</a>
+  <a href="about_us.html">About us</a>
+  <a href="faq.html">FAQ</a>
+  <a href="testimonial.html">Testimonial</a>
+  <div class="search-container">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">Submit</button>
+  </div>
+</div>
+
+<h3>Payment</h3>
+<label for="paymentselection">Payment Selection:</label></br>
+<input type="radio" id="paymentselection" name="creditcard" value="creditcard" onclick='creditCard()'>
+<label for="creditcard">Credit Card</label></br>
+<input type="radio" id="paymentselection" name="onlinebanking" value="onlinebanking" onclick='onlineBanking()'>
+<label for="onlinebanking">Online Banking</label></br>
+<input type="radio" id="paymentselection" name="cashondelivery" value="cashondelivery" checked="checked"  onclick='cashOnDelivery()'>
+<label for="other">Cash On Delivery</label></br></br>
+
+<div class="attention" id="attention">
+    ATTENTION!!</br>
+    You will need to make a payment when the delivery man<br/>
+    send the parcel to your home.
+</div>
+
+<div class="payment">
+  <input type="submit" name="submit" id="submit" value="I confirmed to place My Order" onclick="myFunction();"></button>
+</div>
+
+<script>
+  function creditCard()
+  {
+    window.location="creditcard.html"
+  }
+
+  function onlineBanking()
+  {
+    window.location="onlinebanking.html"
+  }
+
+  function cashOnDelivery()
+  {
+    window.location="cashondelivery.html"
+  }
+      
+  function myFunction()
+  {
+      document.getElementById('submit').onclick
+				{
+						alert("Your order has been successfully submitted. You may receive your order items within 3 to 5 days ")
+        }
+
+  }
+</script>
+
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="addtocart.js"></script>
+
+<footer>
+    Unique Sports Direction(USD) &#8226; 012-3456789 &#8226; uniqueSD@gmail.com
+</footer>
+</body>
+</html>

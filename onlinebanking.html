@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unique Sport Direction</title>
+<link href="home_page.css" rel="stylesheet" />
+<link href="payment.css" rel="stylesheet" />
+<link href="https://ionicons.com/usage">
+<script>
+    function creditCard()
+  {
+    window.location="creditcard.html"
+  }
+
+  function onlineBanking()
+  {
+    window.location="onlinebanking.html"
+  }
+
+  function cashOnDelivery()
+  {
+    window.location="cashondelivery.html"
+  }
+</script>
+</head>
+
+<body>
+  <header>
+  <img src="usd_logo.jpeg" alt="LOGO" >
+  <div class="addtocart">
+    <button style="font-size:12px"> <ion-icon name="cart-outline"></ion-icon><a href="addtocart.html">Add to Cart </a><span>0</span</button>
+  </div>
+  <div class="member">
+    <button style="font-size:12px"><ion-icon name="people-outline"></ion-icon><a href="login.html">Member Login</a></button>
+  </div>
+  </header>
+
+<div class="topnav">
+  <a href="homepage.html">Home</a>
+  <a href="newinpage.html">New in</a>
+  <a href="menpage.html">Men</a>
+  <a href="womenpage.html">Women</a>
+  <a href="contact_us.html">Contact us</a>
+  <a href="aboutus.html">About us</a>
+  <a href="faq.html">FAQ</a>
+  <a href="testimonial.html">Testimonial</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<h3>Payment</h3>
+<div>
+  <label for="paymentselection">Payment Selection:</label></br>
+            <input type="radio" id="paymentselection" name="paymentselection" value="creditcard" onclick='creditCard()'>
+            <label for="creditcard">Credit Card</label></br>
+            <input type="radio" id="paymentselection" name="paymentselection" value="onlinebanking" checked="checked" onclick='onlineBanking()'>
+            <label for="onlinebanking">Online Banking</label></br>
+            <input type="radio" id="paymentselection" name="paymentselection" value="cashondelivery" onclick='cashOnDelivery()'>
+            <label for="cashondelivery">Cash On Delivery</label></br></br>
+</div>
+
+<div class="payment">
+  <form name="online" id="online" method="POST">
+    <label for="accnumber">Account Number:</br>
+    <input type="text" id="accnumber" name="accnumber" placeholder="" required></br></br>
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" required><br></br>
+    <label for="pwd">Password:</label><br>
+    <input type="password" id="pwd" name="pwd" required><br><br>
+    <label for="payto">Pay To:</label><br>
+    <input type="text" id="payto" name="payto" value="001122334455" required><br/></br/>
+    <label for="name">Recipient Name:</label><br>
+    <input type="text" id="name" name="name" value="Unique Sports Direction"><br/></br/>
+    <label for="amount">Amount:</label><br>
+    <input type="text" id="amount" name="amount" placeholder="" required><br/></br/>
+    <label for="purpose">Purpose:</label><br>
+    <input type="text" id="purpose" name="purpose" placeholder="" required><br/></br/>
+    <input type="submit" value="Submit" onclick="submitForm();">
+    <input type="submit" value="Cancel" onclick="cancel();">
+
+  </form>
+</div>
+
+<script>
+  function submitForm()
+  {
+    var accnumber = document.getElementById('accnumber').value;
+    var username = document.getElementById('username').value;
+    var pwd = document.getElementById('pwd').value;
+    var payto = document.getElementById('payto').value;
+    var name = document.getElementById('name').value;
+    var amount = document.getElementById('amount').value;
+    var purpose = document.getElementById('purpose').value;
+    
+      if(accnumber=='' && username=='' && pwd=='' &&payto=='' && name=='' && amount=='' &&purpose=='')
+      {
+        alert("Please fill all fields...!!!!!!");
+        return false;
+      }  
+    
+      else if(accnumber == '')
+      {
+          alert('Please enter Account Number.');
+          return false;
+      }
+      else if(username == '')
+      {
+          alert('Please enter Username.');
+          return false;
+      }
+      else if(pwd == '')
+      {
+          alert('Please enter Password.');
+          return false;
+      }
+      else if(payto == '')
+      {
+          alert('Please enter Pay to.');
+          return false;
+      }
+      else if(name == '')
+      {
+          alert('Please enter Recipient Name.');
+          return false;
+      }
+      else if(amount == '')
+      {
+          alert('Please enter Amount of payment.');
+          return false;
+      }
+      else if(purpose == '')
+      {
+          alert('Please enter Purpose.');
+          return false;
+      }
+      else 
+      {
+          if(payto != '' && name != '' && amount!='' && purpose!='')
+          {
+            alert('Your order has been successfully submitted. You may receive your order items within 3 to 5 days');
+
+              return false;
+          }
+
+      
+  }
+}
+
+function cancel(){
+	if (confirm("Are you sure you want to cancel to make a payment?") == 1)
+	{
+		document.online.reset();
+      window.location.reload();
+  }
+}
+</script>
+
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="addtocart.js"></script>
+
+<footer>
+    Unique Sports Direction(USD) &#8226; 012-3456789 &#8226; uniqueSD@gmail.com
+</footer>
+  
+</body>
+</html>

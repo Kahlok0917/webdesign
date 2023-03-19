@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+
+.sign{
+    color: black;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+span{
+    border: 2px solid black;
+}
+
+p a{
+    text-decoration:none;
+}
+
+h2{
+    margin-left: 10%;
+}
+
+.login input{
+    width: 40%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .login button[type=submit] {
+    width: 10%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+label{
+    margin-left: 2%;
+}
+
+button{
+    margin-top: 10px;
+    background-color: #ccc;
+    border: unset;
+}
+
+button:hover{
+    opacity: 0.8;
+
+}

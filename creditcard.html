@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unique Sport Direction</title>
+<link href="home_page.css" rel="stylesheet" />
+<link href="payment.css" rel="stylesheet" />
+<link href="https://ionicons.com/usage">
+<script>
+  function creditCard()
+  {
+    window.location="creditcard.html"
+  }
+
+  function onlineBanking()
+  {
+    window.location="onlinebanking.html"
+  }
+
+  function cashOnDelivery()
+  {
+    window.location="cashondelivery.html"
+  }
+  
+  function submitForm()
+  {
+      var cname = document.getElementById('cname').value;
+      var cnum = document.getElementById('cnum').value;
+      var expdate = document.getElementById('expdate').value;
+      var securitycode = document.getElementById('securitycode').value;
+
+      if(cname=='' && cnum=='' && expdate=='' &&  securitycode=='')
+      {
+        alert("Please fill all fields...!!!!!!");
+        return false;
+      }
+      
+      else if(cname == '')
+      {
+          alert('Please enter Name on Card.');
+          return false;
+      }
+      else if(cnum == '')
+      {
+          alert('Please enter Card Number.');
+          return false;
+      }
+      else if(expdate == '')
+      {
+          alert('Please enter Expiry date.');
+          return false;
+      }
+      else if(securitycode == '')
+      {
+          alert('Please enter Security Code.');
+          return false;
+      }
+      else 
+      {
+          if(cname != '' && cnum != '' && expdate!='' && securitycode!='')
+          {
+              alert('Your order has been successfully submitted. You may receive your order items within 3 to 5 days');
+
+              return true;
+          }
+          else
+          {
+              alert('Unable to submit your order with your payment.');
+              return false;
+          }
+      }
+  }
+
+  function cancel(){
+	if (confirm("Are you sure you want to cancel to make a payment?") == 1)
+	{
+		document.ccard.reset();
+      window.location.reload();
+  }
+}
+</script>
+</head>
+
+<body>
+  <header>
+  <img src="usd_logo.jpeg" alt="LOGO" >
+  <div class="addtocart">
+    <button style="font-size:12px"> <ion-icon name="cart-outline"></ion-icon><a href="addtocart.html">Add to Cart </a><span>0</span</button>
+  </div>
+  <div class="member">
+    <button style="font-size:12px"><ion-icon name="people-outline"></ion-icon><a href="login.html">Member Login</a></button>
+  </div>
+  </header>
+
+<div class="topnav">
+  <a href="homepage.html">Home</a>
+  <a href="newinpage.html">New in</a>
+  <a href="menpage.html">Men</a>
+  <a href="womenpage.html">Women</a>
+  <a href="contact_us.html">Contact us</a>
+  <a href="aboutus.html">About us</a>
+  <a href="faq.html">FAQ</a>
+  <a href="testimonial.html">Testimonial</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+<body>
+  <h3>Payment</h3>
+  <form name="ccard" id="ccard" method="post">
+    <label for="paymentselection">Payment Selection:</label><br/>
+              <input type="radio" id="paymentselection" name="paymentselection" value="creditcard" checked="checked" onclick='creditCard()'>
+              <label for="creditcard">Credit Card</label><br/>
+              <input type="radio" id="paymentselection" name="paymentselection" value="onlinebanking"  onclick='onlineBanking()'>
+              <label for="onlinebanking">Online Banking</label><br/>
+              <input type="radio" id="paymentselection" name="paymentselection" value="cashondelivery" onclick='cashOnDelivery()'>
+              <label for="cashondelivery">Cash On Delivery</label><br/><br/>
+  
+  <div class="payment" id="payment">
+    <label for="cards">Accepted Cards</label><br/><br/>
+      <a href="#" id="navicon"><img src="accepted credit card.jpeg" alt="" /></a><br/><br/>
+    <label for="cname">Name on Card</label><br/>
+    <input type="text" id="cname" name="cardname" placeholder="Name On Card" required><br/><br/>
+    <label for="ccnum">Credit Card Number</label><br/>
+    <input type="text" id="cnum" name="cardnumber" placeholder="1111-2222-3333-4444" required><br/><br/>
+    <div class="creditcard" id="creditcard">
+        <label for="expdate">Expiry Date</label><br/>
+        <input type="text" id="expdate" name="expdate" placeholder="DD/MM" required><br/><br/>
+        <label for="securitycode">Security Code</label><br/>
+        <input type="text" id="securitycode" name="securitycode" placeholder="123" required>
+    </div>
+  </div>
+<label>
+</br><input type="checkbox" checked="checked" name="sameadr"> Save my card for faster checkout<br/>
+</label>
+<div class="payment">
+  <input type="submit" value="Next" onclick="javascript:return submitForm();">
+  <input type="submit" value="Cancel" onclick="cancel();">
+</div>
+
+</form>
+</div>
+</div>
+
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="addtocart.js"></script>
+
+<footer>
+  Unique Sports Direction(USD) &#8226; 012-3456789 &#8226; uniqueSD@gmail.com
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unique Sport Direction</title>
+<link href="home_page.css" rel="stylesheet" />
+<link href="login.css" rel="stylesheet" />
+<link href="https://ionicons.com/usage">
+<script>
+    function submitForm()
+    {
+        var email = document.getElementById('email').value;
+        var pwd = document.getElementById('pwd').value;
+
+      if(email=='' && pwd=='')
+      {
+        alert("Please fill all fields...!!!!!!")
+        return false;
+      }
+      
+      else if(email == '')
+      {
+          alert('Please enter Email.');
+          return false;
+      }
+      else if(pwd == '')
+      {
+          alert('Please enter Password.');
+          return false;
+      }
+      
+      else
+      {
+        alert('You are successfully log in')
+        return false;
+      }
+    }
+</script>
+<body>
+  <header>
+  <img src="usd_logo.jpeg" alt="LOGO" >
+  <div class="addtocart">
+    <button style="font-size:12px"> <ion-icon name="cart-outline"></ion-icon><a href="addtocart.html">Add to Cart </a><span>0</span</button>
+  </div>
+  <div class="member">
+    <button style="font-size:12px"><ion-icon name="people-outline"></ion-icon><a href="login.html">Member Login</a></button>
+  </div>
+  </header>
+<div class="topnav">
+  <a href="homepage.html">Home</a>
+  <a href="newinpage.html">New in</a>
+  <a href="menpage.html">Men</a>
+  <a href="womenpage.html">Women</a>
+  <a href="contact_us.html">Contact us</a>
+  <a href="about_us.html">About us</a>
+  <a href="faq.html">FAQ</a>
+  <a href="testimonial.html">Testimonial</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+     
+    <h2>Log In</h2>
+     
+    <form method="POST">
+        <div class="login">
+        <label for="email">Email:</label><br/>
+        <input type="email" id="email" name="email" required><br/>
+        <label for="pwd">Password:</label><br/>
+        <input type="password" id="pwd" name="password" required><br/>
+
+        <button type="submit" onclick="javascript:return submitForm();">Login</button>
+        </div>
+    </form>
+
+    <p>Don't have an account? <a href="signup.html" class="sign"><span>Sign up now!</span></a></p>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="addtocart.js"></script>
+    
+
+    <footer>
+      Unique Sports Direction(USD) &#8226; 012-3456789 &#8226; uniqueSD@gmail.com
+  </footer>
+  </body>
+  </html>
